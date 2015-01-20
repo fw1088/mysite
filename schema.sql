@@ -1,0 +1,14 @@
+SET SESSION storage_engine = "InnoDB";
+SET SESSION time_zone = "+0:00";
+
+ALTER DATABASE CHARACTER SET "utf8";
+
+DROP TABLE IF EXISTS pauser;
+CREATE TABLE pauser(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(32) NOT NULL,
+	password VARCHAR(64) NOT NULL ,
+	content VARCHAR(256) 
+);
+ 
+
