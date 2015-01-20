@@ -43,9 +43,7 @@
 .danger{
 	color:#C12E2A
 }
-.whitecolor{
-	color:#FFF;
-}
+
 .back {
 		-moz-animation: back 0.75s;
 		-webkit-animation: back 0.75s;

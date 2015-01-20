@@ -31,22 +31,22 @@
     		<!-- Brand and toggle get grouped for better mobile display -->
     	    <div class="navbar-header">
     	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#global-navbar">
-    	        <span class="sr-only">Toggle navigation</span>
-    	        <span class="icon-bar"></span>
-    	        <span class="icon-bar"></span>
-    	        <span class="icon-bar"></span>
-    	        <span class="icon-bar"></span>
-    	        <span class="icon-bar"></span>
+    	           <span class="sr-only">Toggle navigation</span>
+    	        <span class="icon-bar btn-primary"></span>
+    	        <span class="icon-bar btn-success"></span>
+    	        <span class="icon-bar btn-info"></span>
+    	        <span class="icon-bar btn-warning"></span>
+    	        <span class="icon-bar btn-danger"></span>
     	      </button>
     	      <a href="/"><img src="../static/img/logo.png" alt="logo" ></a>
     	    </div>
-    
+    	<div id="xcrf"> {% module xsrf_form_html() %} </div>
     	  
     	    <div class="collapse navbar-collapse" id="global-navbar">
     	    	<ul class="nav navbar-nav">
-    	    		<li><a  href="/"><h2 class="withoutOutline">首页</h2></a></li>
-    	    		<li><a  href="#"><h2 class="withoutOutline">关于</h2></a></li>
-    	    		<li><a  href="/"><h2 class="withoutOutline">ContactUs</h2></a></li>
+    	    		<li><a  href="/"><h2 class="withoutOutline primary">首页</h2></a></li>
+    	    		<li><a  href="#"><h2 class="withoutOutline success">关于</h2></a></li>
+    	    		<li><a  href="/"><h2 class="withoutOutline info">ContactUs</h2></a></li>
     	    	</ul>
     	    	<ul class="nav navbar-nav navbar-right">
                 
@@ -56,18 +56,18 @@
 		
                 </li>
                 <li  class="dropdown">
-                    <a href="" data-toggle="modal"><h3 class="withoutOutline">{{ username }}</h3></a>
+                    <a href="" data-toggle="modal"><h3 class="withoutOutline warning">{{ username }}</h3></a>
                 </li>
 
 		 <li  class="dropdown">
-                    <a href="/logout" data-toggle="modal"><h3 class="withoutOutline">Logout</h3></a>
+                    <a href="/logout" data-toggle="modal"><h3 class="withoutOutline danger">Logout</h3></a>
                 </li>
 		{% else%}
 		<li >	
- 		   <a id="myModal" href="#"><h3 class="withoutOutline">登录</h3></a>
+ 		   <a id="myModal" href="#"><h3 class="withoutOutline warning">登录</h3></a>
                 </li>
                 <li  class="dropdown">
-                    <a href="" data-toggle="modal"><h3 class="withoutOutline">注册</h3></a>
+                    <a href="" data-toggle="modal"><h3 class="withoutOutline danger">注册</h3></a>
                 </li>
 		{% end %}
     	    </div>  
@@ -91,7 +91,7 @@
           </div>
         </div>
         <div class="item active">
-          <img src="../static/img/bg0.jpg" alt="Second slide">
+          <img src="../static/img/subway3.jpg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Another example headline.</h1>
@@ -117,7 +117,9 @@
         <span class="glyphicon glyphicon-chevron-right"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div>
+    
  {% block content %}{%end%}
+</div>
+	<div class="footer"><h2>fangwei's page<p class="small">@2015</p></h2></div>
 	</body>
 </html>
