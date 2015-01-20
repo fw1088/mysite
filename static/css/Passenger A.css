@@ -1,0 +1,93 @@
+.bg_picContain {
+				width:100%;height:45%;
+				margin: 0px auto; 
+				position: absolute;top:0px;
+				right: 0px;padding: 0px;
+				z-index:-1600;
+				overflow: hidden;
+				border: 0px;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-image: url(../img/bgpic.jpg);
+}
+
+@keyframes back{
+		0% {
+				transform: translateX(25px) rotate(540deg);
+    		}
+     	100% {
+    			transform:translateX(0px) rotate(0deg) ;
+    		}
+		}
+			
+@keyframes backhide{
+		 0% {
+				transform: translateX(0px) rotate(0deg);
+    		}
+     	100% {
+    			transform:translateX(75px) rotate(540deg) ;
+    		}
+		}
+.back {
+		-moz-animation: back 0.75s;
+		-webkit-animation: back 0.75s;
+		transition-timing-function: linear;
+		transition: 0.75s;	
+	}
+.backhide {
+	-moz-animation: backhide 0.75s;
+	-webkit-animation: backhide 0.75s;
+	transition-timing-function: linear;
+		transition: 0.75s;	
+}
+
+.withoutOutline {
+	margin-top: 0px;
+	padding: 0px;
+	color: #FFFFFF;
+	
+}
+
+.backtotop{
+	position:fixed;
+	right:25px;
+	bottom:50px;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;	
+}
+
+.backtotop:hover{
+	cursor: pointer;
+}
+.navbar-top.navbar-default {
+    border-color: transparent;
+}
+.navbar-top {
+    background: none repeat scroll 0% 0% rgba(78, 190, 203, 0.0);
+    border: medium none; 
+}
+
+.navbar-topnext {
+	background: none repeat scroll 0% 0% rgba(78, 190, 203, 0.8);
+    border: medium none; 
+}
+.navbar-ghost .navbar-nav {
+    margin: 0px auto;
+    display: table;
+    table-layout: fixed;
+    float: none;
+}
+
+.navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0px;
+    overflow: visible !important;
+}
+.navbar-collapse {
+    width: auto;
+    border-top: 0px none;
+    box-shadow: none;
+}
+
