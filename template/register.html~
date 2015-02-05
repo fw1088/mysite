@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../static/css/Passenger A.css">
+		<link rel="stylesheet" href="../static/css/jBox.css">
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+ 		<script src="../static/js/pa.js"></script>
+		<script src="../static/js/jBox.js"></script>
+	</head>
+	<body>
+ 		<div id="xcrf"> {% module xsrf_form_html() %} </div>^M    
+		<div class="navtop">
+			
+			<img src="../static/img/logo.png" style="float: left;"></img>
+			<h3 class="index"><a class="hrefatt" href="#">关于</a></h3>
+			<h3 class="index"><a class="hrefatt" class="hrefatt" href="/">首页</a></h3>
+			<h3 class="index"><a class="hrefatt" href="#">Contact Us</a></h3>
+			
+			
+			<h3 class="indexright"><a class="hrefatt" href="/">登录</a></h3>
+			<h3 class="indexright"><a class="hrefatt" href="/register">注册</a></h3>
+			
+		</div>
+		<div style="top:80px;position: absolute; width: 100%;margin-left: 80px;">
+		<h2>欢迎注册</h2>
+		<form id="signup" action="/register" method="post">
+			{% module xsrf_form_html() %}
+            <p class="label">电子邮件</p>
+            <p class="text"><input class="inputatt" type="text" name="email" placeholder="your email" ></p>
+            <p class="label"><label for="id_username">用户名：</label></p>
+            <p class="text"><input class="inputatt" type="text" name="name"  placeholder="Enter your name" ></p>
+            <p class="label"><label for="id_password">密码：</label></p>
+            <p class="text password"><input class="inputatt" type="password" placeholder="Password"  name="password" ></p>
+            <p><input class="regbtn" type="submit" value="注册"></p>
+        </form>       
+        </div>
+	 <div class="pafooterreg"><a href="https://github.com/fw1088"><img class="withoutOutline" src="../static/img/github.png"></img></a><p class="pawhite">fangwei's page</p></div>
+	</body>
+</html>

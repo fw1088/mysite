@@ -3,6 +3,7 @@ import tornado.ioloop
 import tornado.web
 import os
 import torndb
+import time
 from config import dbconfig
 class BaseHandler(tornado.web.RequestHandler):
 	@property
@@ -20,12 +21,15 @@ class MainHandler(BaseHandler):
 
 class LoginHandler(BaseHandler):
 	def get(self):
-		self.render("login.html");
+		#self.render("login.html");
+		return;
 	def post(self):
 		password = self.db.get("SELECT   password from pauser WHERE name = %s",self.get_argument("name"))
-		if password['password'] == self.get_argument("password") :
-			self.set_secure_cookie("name",self.get_argument("name"))
+		if type(password) != type(None) and password['password'] == self.get_argument("password") :
+			self.set_secure_cookie("name",self.get_argument("name"),expires=time.time()+120) 
 			self.redirect("/")
+		else:
+			self.redirect("/")	
 
 class LookInfoHandler(BaseHandler):
 	@tornado.web.authenticated
@@ -40,19 +44,18 @@ class LogoutHandler(BaseHandler):
 		self.redirect("/")
 
 class RegisterHandler(BaseHandler):
-	@tornado.web.authenticated
+	#@tornado.web.authenticated
 	def get(self):
-		self.redirect("/")
+		self.render("register.html")
 	def post(self):
 		name = self.get_argument("name")
 		password = self.get_argument("password")
+		email = self.get_argument("email")
 		try:
 			self.db.execute(
-				"INSERT INTO pauser (name,password) VALUES (%s,%s)",name,password)
+				"INSERT INTO pauser (name,password,email) VALUES (%s,%s,%s)",name,password,email)
 		except Exception as e:
 			return;
-		else:
-			self.set_secure_cookie("name",name)
 		self.redirect("/")
 			
 settings= dict(
