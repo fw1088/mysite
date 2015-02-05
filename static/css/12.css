@@ -1,0 +1,70 @@
+.navtop {
+	background-color: rgba(79,165,239,200);
+	width: 100%;height: 68px;
+	border: 0px;left: 0px;top:0px;
+	position: absolute;
+	line-height: 68px;
+}
+.index{
+	color: #FFF;
+	display: inline-block;
+	margin-left: 30px;
+	margin-top: 0px;
+	position: relative;
+	float: left;
+    
+   
+}
+.indexright{
+	color: #FFF;
+	display: inline-block;
+	float: right;
+	
+	margin-right: 30px;
+	margin-top: 0px;
+}
+
+.primary{             
+	color:#2B669A     
+}                     
+.success{             
+	color: #398439;   
+}                     
+.info{                
+	color:#269ABC     
+}                     
+.warning{             
+	color:#D58512     
+}                     
+.danger{              
+	color:#C12E2A     
+}                     
+
+.text{
+	margin-top: 0px;
+	
+}
+.inputatt{
+	width: 742px;
+	height: 30px;
+	border-radius: 4px;
+	border:1px solid #ddd;
+}
+.btn{
+	width: 60px;
+	height: 40px;
+	background-color: #0075c2;
+	border-radius: 4px;
+	text-shadow: none;
+	box-shadow: none;
+	color:#FFF;
+	text-align:center;
+	cursor:pointer;
+ 	line-height:40px;
+	border-radius: 3px;
+	border: 0px;
+}
+.hrefatt{
+	text-decoration:none;
+	color: #FFF;
+}
